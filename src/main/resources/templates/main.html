@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:replace="header.html::header"></div>
+    <!-- th:문법 => 타임리프 문법 -->
+    <!-- 해당 파일의 플러그 불러오기-->
+    <!-- th:replace = "파일명.html::플러그이름"-->
+    <h3>인텔리제이에서 작성한 HTML</h3>
+    <div>인텔리제이(무료) : html 제공</div>
+    <div>js, css 제공 x</div>
+    <div>자동완성을 제공하지 않는 언어는 자동완성 프로그램 설치 = tabnine</div>
+
+    <div>html에 html 포함시키기 [jsp에서는 include]</div>
+    <p>타임리프를 이용해 다른 html 가져오기</p>
+    <div>java에서 넘어온 데이터 호출</div>
+    <div th:text="${data}"></div>
+
+    <div>ajax를 이용한 java에서 통신한 데이터 호출</div>
+    <div id="divbox"></div>
+    <div th:replace="footer.html::footer"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+//주석
+//그레이들 페이지 공간
+//외부 라이브러리를 다운받는 코드
+//그루비 언어[JSON과 유사함]
+plugins {
+    id 'org.springframework.boot' version '2.7.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8' // 자바 버전
+
+repositories {
+    mavenCentral()
+}
+
+dependencies { // 의존성[라이브러리를 다운받아오는 공간]
+    implementation 'org.springframework.boot:spring-boot-starter-web' // starter-web 의존성 부여
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // 타임리프 : 템플릿 엔진(문서(view)에 데이터를 넣어주는 프로그램)
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' // starter 테스트 의존성 부여
+    //새 의존성 추가시 여기에 추가 [ 링크로 갖고오기 ]
+}
+
+tasks.named('test') { // 스프링 테스트를 권장함
+    useJUnitPlatform()
+}
